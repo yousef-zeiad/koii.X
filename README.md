@@ -98,7 +98,7 @@ Run efficient tests using developer machine performance.
 
 ## Styled Components
 
-Project uses Styled components v5.1.1 for RN to make the styles read more:
+Project uses Styled components to make the styles read more:
 
 - https://styled-components.com/docs
 
