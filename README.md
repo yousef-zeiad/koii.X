@@ -1,11 +1,11 @@
 <!-- language-all: javascript -->
 
-<h1 align="center">
+<h1 align="left">
   Koii X
 </h1>
 ---
 
-[![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](link to site) [![](https://img.shields.io/badge/made%20by-koii-blue)](https://koii.network)
+[![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg) [![](https://img.shields.io/badge/made%20by-koii-blue)](https://koii.network)
 
 ## Table of Contents
 
