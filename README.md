@@ -5,7 +5,7 @@
 </h1>
 ---
 
-[![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](link to site) [![](https://img.shields.io/badge/made%20by-koii-blue)](https://koii.network)
+[![Prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) ![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg) [![](https://img.shields.io/badge/made%20by-koii-blue)](https://koii.network)
 
 ## Table of Contents
 
@@ -98,7 +98,7 @@ Run efficient tests using developer machine performance.
 
 ## Styled Components
 
-Project uses Styled components v5.1.1 for RN to make the styles read more:
+Project uses Styled components to make the styles read more:
 
 - https://styled-components.com/docs
 
