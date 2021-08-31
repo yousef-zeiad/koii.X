@@ -1,6 +1,6 @@
 <!-- language-all: javascript -->
 
-<h1 align="center">
+<h1 align="left">
   Koii X
 </h1>
 ---
