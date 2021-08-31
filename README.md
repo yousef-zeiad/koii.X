@@ -106,7 +106,7 @@ Project uses Styled components to make the styles read more:
 
 implementation of [react-storybook](https://github.com/storybookjs/react).
 
-Toggle usage in [App.tsx](./App.tsx).
+ Run yarn storybook
 
 # Environment
 
