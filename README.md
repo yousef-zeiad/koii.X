@@ -39,7 +39,7 @@ Describes the app structure and usage of each part. Add additional ReadMe-files 
 - [config](./config) - global config files
 - [features](./features) - main app code divided by feature. A feature folder contains all the screens, components, hooks etc for that feature.
 - [lib](./lib) - shared business logic such as hooks, api
-- [routes]- [react-router](https://reactrouter.com/web/guides/quick-start) implementation.
+- [routes](./) [react-router](https://reactrouter.com/web/guides/quick-start) implementation.
 - [storybook](./storybook/index.js) - see **[storybook](#storybook)** section
 
 # Scripts
