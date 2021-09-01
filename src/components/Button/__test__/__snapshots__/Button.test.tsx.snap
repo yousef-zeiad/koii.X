@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button it should exist 1`] = `
+<div
+  className="button undefined"
+  data-test-id="hello"
+  onClick={[MockFunction]}
+>
+  <span>
+    Button
+  </span>
+</div>
+`;
