@@ -13,7 +13,7 @@ describe('Button', () => {
   })
 
   test('it should exist', () => {
-    // make assertions on root 
+    // make assertions on root
     expect(ButtonWrapper.toJSON()).toMatchSnapshot();
   })
 
