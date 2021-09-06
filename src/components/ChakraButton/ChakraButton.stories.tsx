@@ -3,7 +3,7 @@ import CustomButton from './CustomeButton';
 
 export default {
   component: CustomButton,
-  title: 'CustomButton',
+  title: 'Chakra/CustomButton',
 };
 
 const Template = (args: any) => <CustomButton {...args} />;
