@@ -5,10 +5,9 @@ import { Container, HStack, Stack, Button, ButtonGroup, IconButton } from '@chak
 // icons
 import { RiArrowRightLine, RiMailLine, RiPhoneFill, RiSearchLine } from 'react-icons/ri';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import { MdBuild, MdCall } from 'react-icons/md';
 
 export default {
-  title: 'Buttons',
+  title: 'Buttons/Buttons',
   decorators: [
     (Story: any) => (
       <Container mt="40px">
@@ -18,7 +17,7 @@ export default {
   ]
 };
 
-export const withVariants = () => (
+export const withVariants: React.FC = () => (
   <HStack spacing="24px">
     <Button colorScheme="teal" variant="solid">
       Button
@@ -38,7 +37,7 @@ export const withVariants = () => (
   </HStack>
 );
 
-export const withSizes = () => (
+export const withSizes: React.FC = () => (
   <HStack>
     <Button colorScheme="blue" size="xs">
       Button
@@ -55,7 +54,7 @@ export const withSizes = () => (
   </HStack>
 );
 
-export const WithIcon = () => (
+export const WithIcon: React.FC = () => (
   <Stack direction="row" spacing={4}>
     <Button leftIcon={<RiMailLine />} colorScheme="teal" variant="solid">
       Email
@@ -66,7 +65,7 @@ export const WithIcon = () => (
   </Stack>
 );
 
-export const WithLoading = () => (
+export const WithLoading: React.FC = () => (
   <Stack direction="row" spacing={4} align="center">
     <Button size="lg" isLoading colorScheme="teal">
       Email
@@ -82,7 +81,7 @@ export const WithLoading = () => (
   </Stack>
 );
 
-export const WithLoadingSpinnerPlacement = () => (
+export const WithLoadingSpinnerPlacement: React.FC = () => (
   <Stack direction="row" spacing={4} align="center">
     <Button isLoading loadingText="Loading" colorScheme="teal" variant="outline" spinnerPosition="start">
       Submit
@@ -93,7 +92,7 @@ export const WithLoadingSpinnerPlacement = () => (
   </Stack>
 );
 
-export const withDisabled = () => (
+export const withDisabled: React.FC = () => (
   <HStack spacing="24px">
     <Button isDisabled colorScheme="teal" variant="solid">
       Button
@@ -110,13 +109,13 @@ export const withDisabled = () => (
   </HStack>
 );
 
-export const customComposition = () => (
+export const customComposition: React.FC = () => (
   <Button size="md" height="48px" width="200px" border="2px solid" borderColor="green.500">
     Button
   </Button>
 );
 
-export const iconButton = () => (
+export const iconButton: React.FC = () => (
   <Stack direction="row">
     <IconButton aria-label="Search database" icon={<RiSearchLine />} />
 
@@ -128,21 +127,21 @@ export const iconButton = () => (
   </Stack>
 );
 
-export const WithButtonGroup = () => (
+export const WithButtonGroup: React.FC = () => (
   <ButtonGroup variant="outline">
     <Button colorScheme="blue">Save</Button>
     <Button>Cancel</Button>
   </ButtonGroup>
 );
 
-export const attachedButtons = () => (
+export const attachedButtons: React.FC = () => (
   <ButtonGroup size="sm" isAttached variant="outline">
     <Button marginEnd="-px">Save</Button>
     <IconButton fontSize="2xl" aria-label="Add to friends" icon={<RiArrowRightLine />} />
   </ButtonGroup>
 );
 
-export const socialButton = () => (
+export const socialButton: React.FC = () => (
   <Stack direction="row">
     <Button colorScheme="facebook" leftIcon={<FaFacebook />}>
       Facebook
