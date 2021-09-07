@@ -1,4 +1,4 @@
-import { ChakraProvider, Flex, IconButton, useColorMode, useColorModeValue, theme } from '@chakra-ui/react';
+import { ChakraProvider, Flex, IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import chakraTheme from '../src/components/layouts/ThemeLayout/chakraTheme';
