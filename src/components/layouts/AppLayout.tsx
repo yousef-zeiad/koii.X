@@ -1,5 +1,6 @@
 import React from 'react';
-
+// ui
+import { Nav } from 'components/common';
 interface AppLayoutProps {
   children: React.ReactNode;
 }
@@ -7,5 +8,10 @@ interface AppLayoutProps {
 export function AppLayout(props: AppLayoutProps) {
   const { children } = props;
 
-  return <>{children}</>;
+  return (
+    <>
+      <Nav />
+      {children}
+    </>
+  );
 }
