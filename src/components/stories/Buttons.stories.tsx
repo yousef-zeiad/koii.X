@@ -19,19 +19,19 @@ export default {
 
 export const withVariants = () => (
   <HStack spacing="24px">
-    <Button colorScheme="teal" variant="solid">
+    <Button colorScheme="brand" variant="solid">
       Button
     </Button>
-    <Button colorScheme="teal" variant="outline">
+    <Button colorScheme="brand" variant="outline">
       Button
     </Button>
-    <Button colorScheme="teal" variant="ghost">
+    <Button colorScheme="brand" variant="ghost">
       Button
     </Button>
-    <Button colorScheme="teal" variant="link">
+    <Button colorScheme="brand" variant="link">
       Button
     </Button>
-    <Button colorScheme="teal" variant="unstyled">
+    <Button colorScheme="brand" variant="unstyled">
       Button
     </Button>
   </HStack>

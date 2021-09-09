@@ -1,6 +1,6 @@
 import React from 'react';
 // ui
-import { Nav } from 'components/common';
+import { Nav, Footer } from 'components/common';
 interface AppLayoutProps {
   children: React.ReactNode;
 }
@@ -12,6 +12,7 @@ export function AppLayout(props: AppLayoutProps) {
     <>
       <Nav />
       {children}
+      <Footer />
     </>
   );
 }
