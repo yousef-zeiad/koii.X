@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { BrowserRouter } from 'react-router-dom';
 import Routes from 'routes';
 // ui
 import { ThemeLayout, AppLayout } from 'components/layouts';
@@ -17,9 +18,11 @@ export const App = () => {
   return (
     <ThemeLayout>
       <QueryClientProvider client={queryClient}>
-        <AppLayout>
-          <Routes />
-        </AppLayout>
+        <BrowserRouter>
+          <AppLayout>
+            <Routes />
+          </AppLayout>
+        </BrowserRouter>
       </QueryClientProvider>
     </ThemeLayout>
   );
