@@ -1,7 +1,8 @@
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { BrowserRouter } from 'react-router-dom';
-import { Routes } from 'routes';
-import './App.css';
+import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "routes";
+import Colors from "./Colors";
+
 /**
  *
  * @returns a query client
@@ -13,9 +14,10 @@ export const App: React.FC = () => {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
+      <Colors />
       <BrowserRouter>
         <Routes />
       </BrowserRouter>
     </QueryClientProvider>
   );
-}
+};
