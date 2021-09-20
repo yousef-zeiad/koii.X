@@ -93,8 +93,8 @@ export const theme = {
     xs: "0.75rem",
     sm: "0.9rem",
     md: "1rem",
-    lg: "2rem",
-    xl: "4rem"
+    lg: "1.5rem",
+    xl: "1.825rem"
   },
   fontWeights: {
     light: 200,
