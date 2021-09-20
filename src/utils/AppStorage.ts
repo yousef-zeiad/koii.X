@@ -5,7 +5,7 @@ function AppStorage() {
 
   function get(key: string) {
     const value = window?.localStorage?.getItem(key);
-    return JSON.parse(value || 'null');
+    return JSON.parse(value || "null");
   }
 
   function remove(key: string) {
@@ -18,7 +18,7 @@ function AppStorage() {
 
   function getItem(key: string) {
     const value = window?.localStorage?.getItem(key);
-    return value ? decodeURIComponent(escape(window.atob(value))) : 'null';
+    return value ? decodeURIComponent(escape(window.atob(value))) : "null";
   }
 
   function removeItem(key: string) {
