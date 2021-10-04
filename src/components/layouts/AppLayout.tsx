@@ -1,18 +1,9 @@
-import React from 'react';
-// ui
-import { Nav, Footer } from 'components/common';
+import React from "react";
+
 interface AppLayoutProps {
   children: React.ReactNode;
 }
 
-export function AppLayout(props: AppLayoutProps) {
-  const { children } = props;
-
-  return (
-    <>
-      <Nav />
-      {children}
-      <Footer />
-    </>
-  );
-}
+export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+  return <>{children}</>;
+};

@@ -1,8 +1,9 @@
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { BrowserRouter } from 'react-router-dom';
-import Routes from 'routes';
+import { QueryClient, QueryClientProvider } from "react-query";
+import { BrowserRouter } from "react-router-dom";
+import { Routes } from "routes";
 // ui
-import { ThemeLayout, AppLayout } from 'components/layouts';
+import { ThemeProvider } from "@emotion/react";
+import { theme } from "theme";
 
 /**
  *
@@ -16,14 +17,12 @@ const queryClient = new QueryClient();
 
 export const App = () => {
   return (
-    <ThemeLayout>
+    <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
-          <AppLayout>
-            <Routes />
-          </AppLayout>
+          <Routes />
         </BrowserRouter>
       </QueryClientProvider>
-    </ThemeLayout>
+    </ThemeProvider>
   );
 };

@@ -1,2 +1,1 @@
-export { ThemeLayout } from './ThemeLayout';
-export { AppLayout } from './AppLayout';
+export { AppLayout } from "./AppLayout";
