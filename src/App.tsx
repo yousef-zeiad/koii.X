@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "routes";
-import Colors from "./Colors";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "./theme";
 /**
@@ -15,7 +14,6 @@ export const App: React.FC = () => {
   const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-      <Colors />
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes />

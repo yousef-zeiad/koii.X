@@ -1,13 +1,14 @@
 import Home from "pages/home";
-import { Route, Switch } from "react-router-dom";
-
-// pages
+import { Switch } from "react-router-dom";
+import PublicRoute from "./PublicRoute";
+// ui
+import { AppLayout } from "components/layouts";
 
 export const Routes = () => {
   return (
     <>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <PublicRoute exact path="/" component={Home} layout={AppLayout} />
       </Switch>
     </>
   );

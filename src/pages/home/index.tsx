@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
 // ui
 import { Button } from "components/ui";
 const Home: React.FC = () => {
   return (
     <div>
-      <Title>Home</Title>
+      <h1>Home</h1>
       <Button size="md" color="primary">
         Click me
       </Button>
@@ -15,8 +14,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-const Title = styled.h1`
-  --color-primary: #ff0000;
-  color: var(--color-primary);
-`;
