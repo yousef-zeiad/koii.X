@@ -1,45 +1,4 @@
-declare module "@emotion/react" {
-  export interface Theme {
-    colors: {
-      primary: string;
-      secondary: string;
-      white: string;
-      black: string;
-    };
-    space: {
-      [key: string]: any;
-    };
-    fonts: {
-      body: string;
-      display: string;
-    };
-    fontSizes: {
-      xs: string;
-      sm: string;
-      md: string;
-      lg: string;
-      xl: string;
-    };
-    fontWeights: {
-      light: number;
-      normal: number;
-      medium: number;
-      semibold: number;
-      bold: number;
-    };
-    lineHeights: {
-      body: number;
-      heading: number;
-    };
-    borders: {
-      none: string;
-      thin: string;
-    };
-    rounded: {
-      [key: string]: any;
-    };
-  }
-}
+import { DefaultTheme } from "styled-components";
 
 const sx = {
   0: "0px",
@@ -77,17 +36,17 @@ const sx = {
   96: "24rem"
 };
 
-export const theme = {
+const theme: DefaultTheme = {
   colors: {
-    primary: "#0070f3",
-    secondary: "#000",
+    primary: ["#7676D9", "#6262D4", "#3A3AC9", "#2D2DA3", "#22227B", "#171753", "#131343", "#0E0E33", "#0A0A23", "#050513"],
+    secondary: ["#A0E4DF", "#8CDED9", "#64D3CB", "#3CC8BE", "#2EA39B", "#237B75", "#1B5F5B", "#134340", "#0B2826", "#030C0B"],
     white: "#fff",
     black: "#000"
   },
   space: sx,
   fonts: {
-    body: "Inter, Helvetica, sans-serif",
-    display: "Inter, Helvetica, sans-serif"
+    body: "IBM Plex Sans, sans-serif",
+    display: "IBM Plex Sans, sans-serif"
   },
   fontSizes: {
     xs: "0.75rem",
@@ -116,3 +75,9 @@ export const theme = {
     full: "9999px"
   }
 };
+
+export interface ThemeProps {
+  theme: typeof theme;
+}
+
+export { theme };
