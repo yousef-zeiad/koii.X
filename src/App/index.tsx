@@ -2,8 +2,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "routes";
 // ui
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "styled-components";
 import { theme } from "theme";
+import { GlobalStyles } from "theme/GlobalStyles";
 
 /**
  *
@@ -18,6 +19,7 @@ const queryClient = new QueryClient();
 export const App = () => {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes />
