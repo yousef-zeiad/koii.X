@@ -12,7 +12,7 @@ export const Home: React.FC = () => {
       <Button as={Link} to="/examples" size="md" color="secondary" m="1rem 0 0.5rem 0">
         Examples →
       </Button>
-      <Button as="a" href="https://github.com/koii-network/koii.X" target="_blank" size="md" color="secondary" m="0.25rem 0 0.5rem 0">
+      <Button as="a" href="https://github.com/koii-network/koii.X#readme" target="_blank" size="md" color="secondary" m="0.25rem 0 0.5rem 0">
         Documentations ↗
       </Button>
       <Description>Happy hacking!</Description>

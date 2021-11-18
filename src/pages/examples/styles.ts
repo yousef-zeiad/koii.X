@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   padding: ${({ theme }) => theme.space[2]};
-  background-color: ${({ theme }) => theme.colors.secondary[8]};
+  background-color: ${({ theme }) => theme.colors.secondary[9]};
   color: ${({ theme }) => theme.colors.white};
   height: 100%;
   display: flex;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   text-align: left;
 `;
 

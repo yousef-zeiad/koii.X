@@ -58,11 +58,11 @@ const StyledButton = styled.button.withConfig({
 })`
   /* Defaults  */
   box-sizing: border-box;
-  display: inline-flex;
   text-align: center;
   color: ${({ theme }) => theme.colors.white};
   border-radius: ${({ theme }) => theme.rounded[1]};
   font-family: ${({ theme }) => theme.fonts.body};
+  font-weight: 500;
   text-decoration: none;
   outline: none;
   border: none;
