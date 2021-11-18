@@ -20,6 +20,7 @@ After the installation is done head to the installed project and inside it run `
 ## Table of Contents
 
 - [Structure](#structure)
+- [Hooks](#hooks)
 - [Scripts](#scripts)
 - [Integrations](#storybook)
   - [Storybook](#storybook)
@@ -37,6 +38,9 @@ Describes the app structure and usage of each part. Add additional ReadMe-files 
 - [lib](./src/lib) - shared business logic such as hooks, api
 - [routes](./src/routes) [react-router](https://reactrouter.com/web/guides/quick-start) implementation.
 - [storybook](./storybook/main.js) - see **[storybook](#storybook)** section
+
+# Hooks
+## useFinnie
 
 # Scripts
 
