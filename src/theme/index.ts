@@ -40,6 +40,7 @@ const theme: DefaultTheme = {
   colors: {
     primary: ["#7676D9", "#6262D4", "#3A3AC9", "#2D2DA3", "#22227B", "#171753", "#131343", "#0E0E33", "#0A0A23", "#050513"],
     secondary: ["#A0E4DF", "#8CDED9", "#64D3CB", "#3CC8BE", "#2EA39B", "#237B75", "#1B5F5B", "#134340", "#0B2826", "#030C0B"],
+    gray: ["#F9FAFB", "#F3F4F6", "#E5E7EB", "#D1D5DB", "#9CA3AF", "#6B7280", "#4B5563", "#374151", "#1F2937", "#111827"],
     white: "#fff",
     black: "#000"
   },
