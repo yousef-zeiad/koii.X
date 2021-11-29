@@ -1,22 +1,37 @@
-import axios from "service/axios";
-import { default as Axios } from "axios";
-import Web3 from "web3";
-// utils
-import { poll } from "./utils";
-// abi
-import koiRouterABI from "./abi/KoiRouter.json";
-import koiTokenABI from "./abi/KoiToken.json";
-// sdk
-import Arweave from "arweave";
-import { interactWrite as interactWriteSdk } from "smartweave";
-// assets
-import zombieList from "./json/zombies.json";
+// import axios from "service/axios";
+// import { default as Axios } from "axios";
+// import Web3 from "web3";
 
-const arweave = Arweave.init({
-  host: "arweave.net",
-  protocol: "https",
-  port: 443
-});
+/**
+ *
+ * @param {Function} fn Function to poll for result
+ * @param {Number} timeout How long to poll for
+ * @param {Number} interval Polling interval
+ * @returns {Promise}
+ */
+export const poll = (fn, timeout, interval) => {
+  var endTime = Number(new Date()) + (timeout || 2000);
+  interval = interval || 100;
+
+  var checkCondition = function (resolve, reject) {
+    // If the condition is met, we're done!
+    var result = fn();
+    if (result) {
+      resolve(result);
+    }
+    // If the condition isn't met but the timeout hasn't elapsed, go again
+    else if (Number(new Date()) < endTime) {
+      setTimeout(checkCondition, interval, resolve, reject);
+    }
+    // Didn't match and too much time, reject!
+    else {
+      reject(new Error("timed out for " + fn + ": " + arguments));
+    }
+  };
+
+  return new Promise(checkCondition);
+};
+
 export const sleep = (t = 300) => new Promise(resolve => setTimeout(resolve, t));
 
 export const initExtension = async () => {
