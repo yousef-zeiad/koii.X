@@ -26,10 +26,10 @@ const {connectToFinnie, walletAddress} = useFinnie();
       <Paper m="1rem 0 0 0" p="1rem">
         <p>Click on the button to connect to Finnie.</p>
         <Button m="5px 0 1rem 0" color="secondary" isLoading={isLoading} onClick={connectFinnie}>
-          {isLoading ? "Connecting..." : isFinnieConnected ? "Connected ✓" : "Click here to connect"}
+          {isLoading ? "Connecting..." : isFinnieConnected ? "Connected ✓" : "Connect to finnie"}
         </Button>
 
-        {isFinnieConnected && !isLoading && (
+        {isFinnieConnected && (
           <Paper bg="#059669" color="white">
             <p>
               <strong>Connected ✓</strong>

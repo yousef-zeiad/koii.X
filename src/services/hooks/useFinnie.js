@@ -20,9 +20,8 @@ export default function useFinnie() {
         }
       });
     } catch (error) {
-      console.log({ error });
       setState(prevState => ({ ...prevState, isLoading: false, isError: error, walletAddress: null, isFinnieConnected: false }));
     }
   };
-  return { walletAddress, isError, isLoading, isFinnieConnected, connectFinnie };
+  return { walletAddress, isError, isLoading, isFinnieConnected, connectFinnie, koiiWallet: window.koiWallet };
 }
