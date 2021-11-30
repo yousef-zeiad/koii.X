@@ -7,8 +7,8 @@ export default function useFinnie() {
     let address;
     try {
       setState(prevState => ({ ...prevState, isLoading: true, isError: null, isFinnieConnected: false }));
-      // Check if extension exists
-      // await initExtension();
+      // Check if extension exists and get permissions.
+      await initExtension();
       // Connect to extension
       await connectToExtension();
       // Get finnie address
