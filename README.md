@@ -22,6 +22,7 @@ After the installation is done head to the installed project and inside it run `
 - [Structure](#structure)
 - [Hooks](#hooks)
   - [useFinnie](#useFinnie) 
+  - [useSdk](#useSdk) 
 - [Integrations](#storybook)
   - [Storybook](#storybook)
 - [Environment](#environment)
