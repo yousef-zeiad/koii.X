@@ -40,7 +40,6 @@ export const initExtension = async () => {
     let extensionObj = await poll(() => window.koiiWallet, 1000, 200);
     // Is it connected?
     let res = await extensionObj.getPermissions();
-    console.log("xd");
 
     if (res.status === 200 && res.data.length) return true;
     else return false;
