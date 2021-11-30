@@ -3,10 +3,9 @@ import React from "react";
 import { CardContainer, CardThumbnail, CardDetails, CardTitle, CardDescription, CardExternalIcon } from "./styles";
 
 export default function NftCard({ item }) {
-  console.log({ item });
   return (
     <CardContainer href={`https://koi.rocks/content-details/${item?.id}`} target="_blank" rel="noopener noreferrer">
-      <CardThumbnail src={`https://koii.live/${item?.id}.png`} alt={item?.title} />
+      <CardThumbnail src={`https://koii.live/${item?.id}.png`} alt={item?.title} loading="lazy" />
       <CardDetails>
         <CardTitle>
           {item?.title}{" "}

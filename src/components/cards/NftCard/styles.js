@@ -11,6 +11,9 @@ export const CardContainer = styled.a`
       display: inline;
     }
   }
+  @media (max-width: 770px) {
+    width: 100%;
+  }
 `;
 export const CardThumbnail = styled.img`
   height: 150px;
@@ -23,7 +26,6 @@ export const CardThumbnail = styled.img`
 export const CardDetails = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: ${({ theme }) => theme.space[3]};
   background-color: ${({ theme }) => theme.colors.white};
   border-bottom-left-radius: ${({ theme }) => theme.space[2]};
@@ -55,10 +57,8 @@ export const CardDescription = styled.h3`
 `;
 
 export const CardExternalIcon = styled.span`
-  position: relative;
   & span {
     line-height: 1;
-    position: relative;
   }
   display: none;
 `;

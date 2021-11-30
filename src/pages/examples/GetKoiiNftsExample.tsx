@@ -8,14 +8,22 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { darcula } from "react-syntax-highlighter/dist/esm/styles/prism";
 // hooks
 import { useSdk } from "services/hooks";
+// utils
+import { formatDigitNumber } from "services/utils";
 
 export default function GetKoiiNftsExample() {
   const codeBlock = `
-const {getKoiiNfts} = useSdk(); 
+const {wallet, getKoiiNfts} = useSdk(); 
 
 <Button onClick={getKoiiNfts}>
   Get my Koii nfts
 </Button>
+
+<NftsListWrapper>
+  {wallet?.nfts?.map((nft) => {
+    return <NftCard item={nft} key={nft.id} />;
+  })}
+</NftsListWrapper>
   `.trim();
 
   /* Working example */
@@ -34,10 +42,19 @@ const {getKoiiNfts} = useSdk();
 
         {status === "success" && (
           <Paper bg="#E5E7EB" color="black">
+            <br />
             <p>
-              <strong>Connected ✓</strong>
+              <>
+                Total attention: <strong>{formatDigitNumber(wallet?.totalAttention)}</strong>
+              </>
             </p>
-            <NftsListWrapper>
+            <p>
+              <>
+                Total Koii: <strong>{Math.round(wallet?.totalReward * 100 || 0) / 100}</strong>
+              </>
+            </p>
+            <br />
+            <NftsListWrapper className="custom-scroll">
               {wallet?.nfts?.map((nft: any, id: number) => {
                 return <NftCard item={nft} key={nft?.id || id} />;
               })}
@@ -56,8 +73,8 @@ const {getKoiiNfts} = useSdk();
           {codeBlock}
         </SyntaxHighlighter>
       </Paper>
-      <Button as="a" href="https://github.com/koii-network/koii.X#usefinnie" target="_blank" size="md" color="primary" m="1rem 0 0 0">
-        <strong>useFinnie</strong> Documentations ↗
+      <Button as="a" href="https://github.com/koii-network/koii.X#usesdk" target="_blank" size="md" color="primary" m="1rem 0 0 0">
+        <strong>useSdk</strong> Documentations ↗
       </Button>
     </div>
   );

@@ -8,3 +8,9 @@ export const getNftsStats = (nfts: any) =>
     },
     [0, 0]
   );
+
+export const formatDigitNumber = (val: any) => {
+  if (typeof val !== "number") return 0;
+  if (val) return val.toLocaleString("en-US", { maximumFractionDigits: 2 });
+  else return 0;
+};

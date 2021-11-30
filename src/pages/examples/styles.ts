@@ -44,6 +44,9 @@ export const NftsListWrapper = styled.div`
   margin: 1rem 0;
   width: 100%;
   text-align: left;
+  max-height: 525px;
+  overflow: auto;
+  padding-right: 1rem;
   @media (max-width: 770px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }

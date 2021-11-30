@@ -22,4 +22,30 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  .custom-scroll {
+    & {
+      /* width */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: #F3F4F6;
+        border-radius: 0px;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #D1D5DB;
+        border-radius: 0px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: #064E3B;
+      }
+    }
+  }
 `;
