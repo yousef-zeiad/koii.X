@@ -42,7 +42,9 @@ Describes the app structure and usage of each part. Add additional ReadMe-files 
 # Hooks
 ## useFinnie
 
-Use the `useFinnie` hook whenever you need to interact with finnie:
+Use the `useFinnie` hook whenever you need to interact with finnie.
+
+Example below how to connect to finnie wallet and get the wallet address:
 
 ```
 import { useFinnie } from "services/hooks";
@@ -65,6 +67,33 @@ function Component() {
       {isError && (
           <p>An error occurred while connecting to finnie.</p>
       )}
+    </>
+  );
+}
+```
+
+## useSdk
+
+Use the `useSdk` hook whenever you need to interact with Koii sdk.
+
+Example below how to get Koii nft for the connected finnie wallet:
+
+```
+import { useSdk } from "services/hooks";
+
+function Component() {
+  const {wallet, getKoiiNfts} = useSdk(); 
+  return (
+    <>
+      <Button onClick={getKoiiNfts}>
+        Get my Koii nfts
+      </Button>
+
+      <NftsListWrapper>
+        {wallet?.nfts?.map((nft) => {
+          return <NftCard item={nft} key={nft.id} />;
+        })}
+      </NftsListWrapper>
     </>
   );
 }
