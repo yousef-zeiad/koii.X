@@ -21,7 +21,7 @@ const {connectToFinnie, walletAddress} = useFinnie();
   const { connectFinnie, isLoading, isError, walletAddress, isFinnieConnected } = useFinnie();
 
   return (
-    <>
+    <div className="example--wrapper">
       <Heading>— 1 Connect to Finnie</Heading>
       <Paper m="1rem 0 0 0" p="1rem">
         <p>Click on the button to connect to Finnie.</p>
@@ -54,6 +54,6 @@ const {connectToFinnie, walletAddress} = useFinnie();
       <Button as="a" href="https://github.com/koii-network/koii.X#usefinnie" target="_blank" size="md" color="primary" m="1rem 0 0 0">
         <strong>useFinnie</strong> Documentations ↗
       </Button>
-    </>
+    </div>
   );
 }
