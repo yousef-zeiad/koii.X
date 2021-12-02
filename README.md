@@ -21,7 +21,9 @@ After the installation is done head to the installed project and inside it run `
 
 - [Structure](#structure)
 - [Hooks](#hooks)
-- [Scripts](#scripts)
+  - [useFinnie](#useFinnie) 
+  - [useSdk](#useSdk) 
+  - [useKoii](#useKoii) 
 - [Integrations](#storybook)
   - [Storybook](#storybook)
 - [Environment](#environment)
@@ -42,47 +44,67 @@ Describes the app structure and usage of each part. Add additional ReadMe-files 
 # Hooks
 ## useFinnie
 
-# Scripts
+Use the `useFinnie` hook whenever you need to interact with finnie.
 
-Scripts to make life easier. Pre-commit is the [lint test command](#yarn-linttest)
+Example below how to connect to finnie wallet and get the wallet address:
 
-## yarn lint-test
+```
+import { useFinnie } from "services/hooks";
 
-Quickest way to run everyday commands as developer, as it executes [yarn lint-errors](#yarn-lint-errors) and [yarn test-dev](#yarn-test-dev) (below).
+function Component() {
+  const { connectFinnie, isLoading, isError, walletAddress, isFinnieConnected } = useFinnie();
 
-## yarn lint
+  return (
+    <>
+      <button onClick={connectFinnie}>
+        {isLoading ? "Connecting..." : isFinnieConnected ? "Connected ✓" : "Connect to finnie"}
+      </button>
+      
+      {isFinnieConnected && (
+        <p>
+            Connected. Your wallet address is: <code>{walletAddress}</code>
+        </p>
+      )}
+        
+      {isError && (
+          <p>An error occurred while connecting to finnie.</p>
+      )}
+    </>
+  );
+}
+```
 
-Lints the project using Prettier.
+## useSdk
 
-## yarn lint-errors
+Use the `useSdk` hook whenever you need to interact with Koii sdk.
 
-Lint and only output breaking errors. Warning: this will miss bad code like inline styles and bad `useEffect` dependencies.
+Example below how to get Koii nft for the connected finnie wallet:
 
-## yarn start
+```
+import { useSdk } from "services/hooks";
 
-Start the React packager. You can optionally
+function Component() {
+  const {wallet, getKoiiNfts} = useSdk(); 
+  return (
+    <>
+      <Button onClick={getKoiiNfts}>
+        Get my Koii nfts
+      </Button>
 
-- **`yarn clear`** to start and reset cache of the bundler.
+      <NftsListWrapper>
+        {wallet?.nfts?.map((nft) => {
+          return <NftCard item={nft} key={nft.id} />;
+        })}
+      </NftsListWrapper>
+    </>
+  );
+}
+```
 
-## yarn test-watch
+## useKoii
 
-Run tests in watch mode, for development, updating snapshots as needed.
+Use the `useKoii` hook whenever you need to interact with Koii internal apis, e.g Uploading to Koi.rocks platform.
 
-Runs the [jest](https://github.com/facebook/jest) test runner on your tests in watch mode with interactive console. Remember to run `u` option when prompted to update snapshots. This is alias to `npm run test`
-
-## yarn test
-
-Run tests as CI, with optimal CPU usage for a linux server. Run this before commit to ensure tests will work on build server.
-
-You can run CI style tests in respective folder using
-
-`yarn test`
-
-In development it's more efficient to run:
-
-## yarn test-dev
-
-Run efficient tests using developer machine performance.
 
 
 ## Styled Components
