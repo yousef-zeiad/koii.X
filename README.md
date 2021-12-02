@@ -23,6 +23,7 @@ After the installation is done head to the installed project and inside it run `
 - [Hooks](#hooks)
   - [useFinnie](#useFinnie) 
   - [useSdk](#useSdk) 
+  - [useKoii](#useKoii) 
 - [Integrations](#storybook)
   - [Storybook](#storybook)
 - [Environment](#environment)
@@ -99,6 +100,10 @@ function Component() {
   );
 }
 ```
+
+## useKoii
+
+Use the `useKoii` hook whenever you need to interact with Koii internal apis, e.g Uploading to Koi.rocks platform.
 
 
 
